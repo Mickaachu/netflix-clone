@@ -10,7 +10,7 @@ function SignInScreen({Login, error}) {
         <div className="signinscreen">
             <form onSubmit={submithandler}>
                 <h1>Sign In</h1>
-                {(error != "") ? (<div className="error">{error}</div>): ""}
+                {(error !== "") ? (<div className="error">{error}</div>): ""}
                 <input className="signupemail" type="email" onChange={e => setDetails({...details,email: e.target.value})} value={details.email}  placeholder="Email address"/>
                 <input className="signuppass" type="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} placeholder="Password" />
                 <button  type="submit" >Sign In</button>
