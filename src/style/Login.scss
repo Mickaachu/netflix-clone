@@ -1,0 +1,189 @@
+.login {
+    position: relative;
+    height: 100%;
+    background: url(../images/netflix-banner.png) center no-repeat ;
+    background-size: cover;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 200px;
+    object-fit: contain;
+   
+    
+}
+
+.signIn_btn {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+
+}
+.login_gradient {
+    width: 100vw;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(to top,
+    rgba(0,0,0,0.8) 0 ,
+    rgba(0,0,0,0) 60%,
+    rgba(0,0,0,0.8) 100%
+    
+    );
+}
+.login_body {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    line-height:1.5;
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    p {
+        font-size: 1rem;
+    }
+    input {
+        width: 500px;
+        height: 50px;
+        padding: 5px;
+        color: white;
+    }
+    button {
+        background-color: red;
+        padding: 10px;
+        padding-top: 5px;
+        margin-top: 5px;
+        margin-left: 10px;
+        color: white;
+        cursor: pointer;
+        .arrow {
+            display: inline-block;
+            padding-top: 10px;
+            width: 10px;
+            height: 20px;
+        }
+    }
+    
+}
+.signinscreen {
+    max-width: 400px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    text-align: start;
+    h1 {
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        background-color: #333;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    button {
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+    }
+    a {
+        color: #b3b3b3;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:active {
+       color: #b3b3b3; 
+    }
+    .flex {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        label {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                margin-top: 3px;
+                border-radius: 1px;
+                margin-right: 5px;
+                background-color: #333;
+                
+                
+            }
+            .check {
+                position: absolute;
+                top: 2px;
+                left: 0px;
+                height: 15px;
+                width: 15px;
+                background-color:#333;
+            }
+            .check:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            .check:after {
+                left: 4px;
+                bottom: 4px;
+                width: 3px;
+                height: 6px;
+                border: solid white;
+                border-width: 0 4px 4px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            input:checked {
+                background-color: #333;
+            }
+            input:checked ~ .check:after {
+                display: block;
+            }
+        }
+    }
+    .error {
+        color: red;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+   
+}
+@media screen and (min-width: 800px) {
+    .login_body {
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+    }
+}
